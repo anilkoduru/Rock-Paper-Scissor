@@ -1,0 +1,120 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: radial-gradient(hsl(214, 47%, 23%,0.9),hsl(237, 49%, 15%,0.9));
+    /* background-repeat: no-repeat; */
+    background-size: auto;
+    height: 100%;
+    /* overflow: hidden; */
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+.up{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 86%;
+    height: 90px;  
+    margin-left: 7%;
+    margin-top: 9%;
+    margin-bottom: 7%;
+    border: 3px solid hsl(217, 16%, 45%);
+    border-radius: 5px;
+}
+.up .left{
+    margin-left: 25px;
+    line-height: 0.8;
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+}
+.up .right{
+    margin-right: 10px;
+    background-color: white;
+    height: 80%;
+    width: 25%;
+    border-radius: 5px;
+    text-align: center;
+}
+#score1{
+    margin-top: 2px;
+    color: blue;
+}
+#score{
+    font-size: 35px;
+    font-weight: 700;
+    color: hsl(217, 16%, 45%);
+}
+.image{
+    position: relative;
+    text-align: center;
+    margin-top: 85px;
+}
+.paper,.rock,.scissor{
+    background-color: white;
+    padding: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.rock{
+    padding: 30px 20px 20px 20px;
+    border: 17px solid hsl(349, 71%, 52%);
+    /* margin-top: 15px; */
+    bottom: 10px;
+    right: 33%;
+    left: 40%;
+}
+.paper{
+    border: 17px solid hsl(230, 89%, 62%);
+    margin-right: 5%;
+}
+.scissor{
+    border: 17px solid hsl(39, 89%, 49%);
+    margin-left: 5%;
+}
+#traingle{
+    position: absolute;
+    top: 70px;
+    right: 30%;
+    width: 40%;
+    height: 50%;
+    z-index: -1;
+}
+.rule{
+    display: flex;
+    justify-content: center;
+    margin-top: 125px;
+    cursor: pointer;
+}
+#Rules{
+    border: 3px solid hsl(217, 16%, 45%);
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+    width: 35%;
+    padding: 10px 0px;
+    letter-spacing: 3px;
+}
+.onclicking{
+    display: flex;
+    justify-content: space-around;
+    height: 350px;
+}
+.manual{
+    text-align: center;
+    margin-top: 75px;
+    margin-left: -3%;
+}
+.system{
+    text-align: center;
+    margin-top: 75px;
+    margin-right: -5%;
+}
+.manual p,.system p{
+    margin-top: 25px;
+    color: white;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
