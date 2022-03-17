@@ -31,3 +31,21 @@ if(selected.style.display === "none"){
         manualimage.classList.add("scissor");
     });
 }
+function randompick(){
+    if(housepicked === 1){
+        systemimage.src = "images/icon-paper.svg";
+        systemimage.classList.add("paper");
+    }
+    if(housepicked === 2){
+        systemimage.src = "images/icon-rock.svg";
+        systemimage.classList.add("rock");
+    }
+    if(housepicked === 3){
+        systemimage.src = "images/icon-scissors.svg";
+        systemimage.classList.add("scissor");
+    }
+}
+var housepicked = Math.floor(Math.random()*3) + 1;
+const systemimage = document.querySelector(".systemimage");
+
+setTimeout(randompick,2000);
