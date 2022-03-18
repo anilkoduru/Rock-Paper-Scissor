@@ -151,6 +151,8 @@ if(screen.width >=776){
     decider.style.display = "none";
     rules.addEventListener("click",function(){
         document.querySelector(".rulesimage").style.display = "initial";
+        document.querySelector(".color").classList.add("blackcolor");
+        document.querySelector(".blackcolor").style.zIndex = "100";
     });
     
 if(selected.style.display === "none"){
