@@ -197,11 +197,11 @@ body{
     }
     .paper{
         border: 28px solid hsl(230, 89%, 62%);
-        margin-right: 8%;
+        margin-right: 6%;
     }
     .scissor{
         border: 28px solid hsl(39, 89%, 49%);
-        margin-left: 8%;
+        margin-left: 6%;
     }
     #traingle{
         top: 80px;
