@@ -10,6 +10,7 @@ body{
     height: 100%;
     /* overflow: hidden; */
     font-family: 'Barlow Semi Condensed', sans-serif;
+    background-color: rgb(0,0,0,0.9);
 }
 .up{
     display: flex;
