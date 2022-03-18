@@ -1,9 +1,15 @@
 var rules = document.getElementById("Rules");
-rules.addEventListener("click",function(){
-    // window.open("rules.html","_self");
-    window.location.replace("rules.html");
+if(screen.width<776){
+    rules.addEventListener("click",function(){
+        // window.open("rules.html","_self");
+        window.location.replace("rules.html");
+    });
+}
+const into = document.getElementById("close");
+into.addEventListener("click",function(){
+    window.open("index.html","_self");
 });
-
+document.querySelector(".rulesimage").style.display = "none";
 const manualimage = document.querySelector(".manualimage");
 const systemimage = document.querySelector(".systemimage");
 const home = document.querySelector(".image");
@@ -29,27 +35,33 @@ function score(){
 function ifloseorwin(){
     if((manualimage.classList[0] == "rock" && systemimage.classList[0] == "scissor")){
         winorlose.innerHTML = "YOU WIN";
-        score();
+        setTimeout(score,1000);
+        // score();
     }
     if((manualimage.classList[0] == "rock" && systemimage.classList[0] == "paper")){
         winorlose.innerHTML = "YOU LOSE";
-        score();
+        setTimeout(score,1000);
+        // score();
     }
     if((manualimage.classList[0] == "paper" && systemimage.classList[0] == "rock")){
         winorlose.innerHTML = "YOU WIN";
-        score();
+        setTimeout(score,1000);
+        // score();
     }
     if((manualimage.classList[0] == "paper" && systemimage.classList[0] == "scissor")){
         winorlose.innerHTML = "YOU LOSE";
-        score();
+        setTimeout(score,1000);
+        // score();
     }
     if((manualimage.classList[0] == "scissor" && systemimage.classList[0] == "paper")){
         winorlose.innerHTML = "YOU WIN";
-        score();
+        setTimeout(score,1000);
+        // score();
     }
     if((manualimage.classList[0] == "scissor" && systemimage.classList[0] == "rock")){
         winorlose.innerHTML = "YOU LOSE";
-        score();
+        setTimeout(score,1000);
+        // score();
     }
     if((manualimage.classList[0] == "scissor" && systemimage.classList[0] == "scissor")){
         winorlose.innerHTML = "DRAW";
@@ -90,7 +102,8 @@ if(selected.style.display === "none"){
         manualimage.classList.add("paper");
         setTimeout(() => decider.style.visibility = "initial",1000);
         rules.style.marginTop = "50px";
-        setTimeout(randompick,2000);
+        // setTimeout(randompick,2000);
+        randompick();
     });
     rock.addEventListener("click",function(){
         home.style.display = "none";
@@ -100,7 +113,8 @@ if(selected.style.display === "none"){
         manualimage.classList.add("rock");
         setTimeout(() => decider.style.visibility = "initial",1000);
         rules.style.marginTop = "50px";
-        setTimeout(randompick,2000);
+        // setTimeout(randompick,2000);
+        randompick();
     });
     scissor.addEventListener("click",function(){
         home.style.display = "none";
@@ -110,7 +124,8 @@ if(selected.style.display === "none"){
         manualimage.classList.add("scissor");
         setTimeout(() => decider.style.visibility = "initial",1000);
         rules.style.marginTop = "50px";
-        setTimeout(randompick,1000);
+        // setTimeout(randompick,1000);
+        randompick();
     });
 }
 
@@ -131,3 +146,30 @@ var restart = document.querySelector("#restart");
 restart.addEventListener("click",function(){
     window.location.replace("index.html");
 });
+
+if(screen.width >=776){
+    decider.style.display = "none";
+    rules.addEventListener("click",function(){
+        document.querySelector(".rulesimage").style.display = "initial";
+    });
+    
+if(selected.style.display === "none"){
+    paper.addEventListener("click",function(){
+        // setTimeout(() => decider.style.display = "initial",1000);
+        decider.style.display = "initial"
+    });
+    rock.addEventListener("click",function(){
+        // setTimeout(() => decider.style.display = "initial",1000);
+        decider.style.display = "initial"
+    });
+    scissor.addEventListener("click",function(){
+        // setTimeout(() => decider.style.display = "initial",1000);
+        decider.style.display = "initial"
+    });
+}
+playagain.addEventListener("click",function(){
+    // window.location.replace("index.html");
+    rules.style.marginTop = "0px";
+    decider.style.display = "none";
+});
+}
